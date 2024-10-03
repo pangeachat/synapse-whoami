@@ -7,7 +7,7 @@ This module adds a whoami endpoint that decodes access token from authorization 
 
 From the virtual environment that you use for Synapse, install this module with:
 ```shell
-pip install path/to/synapse-whoami
+pip install synapse-whoami
 ```
 (If you run into issues, you may need to upgrade `pip` first, e.g. by running
 `pip install --upgrade pip`)
@@ -16,8 +16,7 @@ Then alter your homeserver configuration, adding to your `modules` configuration
 ```yaml
 modules:
   - module: synapse_whoami.WhoAmI
-    config:
-      # TODO: Complete this section with an example for your module
+    config: {}
 ```
 
 

@@ -2,7 +2,8 @@ from typing import Any, Dict
 
 import attr
 from synapse.module_api import ModuleApi
-from .who_am_i import WhoAmIResource
+
+from .who_am_i import WhoAmI as WhoAmIResource
 
 
 @attr.s(auto_attribs=True, frozen=True)
@@ -17,10 +18,13 @@ class WhoAmI:
         self._config = config
 
         # Initiate resources
-        self.whoami = WhoAmIResource(api)
+        self.resource = WhoAmIResource(api)
 
         # Register the HTTP endpoint
-        api.register_web_resource("/_synapse/client/whoami", self.whoami)
+        api.register_web_resource(
+            path="/_synapse/client/whoami",
+            resource=self.resource,
+        )
 
     @staticmethod
     def parse_config(config: Dict[str, Any]) -> WhoAmIConfig:

@@ -6,7 +6,7 @@ readme = "README.md"
 version = "0.0.1"
 
 
-requires-python = ">=3.9"
+requires-python = ">=3.9,<=3.11"
 
 classifiers = [
   "License :: OSI Approved :: Apache Software License"
@@ -51,12 +51,12 @@ line-length = 88
 # flake8-bugbear compatible checks. Its error codes are described at
 # https://docs.astral.sh/ruff/rules/#flake8-bugbear-b
 #  B023: Functions defined inside a loop must not use variables redefined in the loop
-ignore = [
+lint.ignore = [
     "B023",
     "E501",
     "E731",
 ]
-select = [
+lint.select = [
     # pycodestyle
     "E",
     "W",
