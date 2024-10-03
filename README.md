@@ -50,7 +50,7 @@ Synapse developers (assuming a Unix-like shell):
     version=X.Y.Z
     ```
 
- 2. Update `setup.cfg` so that the `version` is correct.
+ 2. Update `pyproject.toml` so that the `version` is correct.
 
  3. Stage the changed files and commit.
     ```shell
