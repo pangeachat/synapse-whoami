@@ -60,7 +60,7 @@ class TestE2E(aiounittest.AsyncTestCase):
             server_url = "http://localhost:8008"
             max_wait_time = 60  # Maximum wait time in seconds
             wait_interval = 0.25  # Interval between checks in seconds
-            total_wait_time = 0
+            total_wait_time = 0.0
 
             while True:
                 try:
